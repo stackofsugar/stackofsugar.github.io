@@ -1,0 +1,122 @@
+/* Variable Definitions */
+:root {
+    --st-red: #2c061f;
+    --st-grey: #374045;
+    --st-orange: #d89216;
+    --st-yellow: #e1d89f;
+    --st-offwhite: #dedede;
+}
+
+/* Selection Definition */
+::selection {
+    background: var(--st-orange);
+}
+
+/* Sticky Footer manipulator */
+div#root {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto;
+}
+
+/* Default background color manipulators */
+body {
+    background-color: #0b0b0b;
+    color: white;
+}
+
+/* Navbar Manipulators */
+.navbar-custom {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #0a0a0a;
+    font-size: 300;
+    border-bottom: 1px solid var(--st-grey);
+}
+.navbar-brand-custom {
+    font-family: "Bebas Neue", cursive;
+}
+.brand-dot {
+    color: var(--st-orange);
+    font-size: xx-large;
+    line-height: 0;
+}
+.color-sweep-navitem {
+    color: white !important;
+    padding: 2px 5px;
+    background: linear-gradient(to right, var(--st-yellow), var(--st-yellow));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.5s 0s, color 0.5s 0s;
+}
+.color-sweep-navitem:hover {
+    color: var(--st-red) !important;
+    background-size: 100% 100%;
+}
+.color-sweep-navitem.active {
+    color: var(--st-red) !important;
+    background-color: var(--st-yellow);
+}
+/* sm down */
+@media only screen and (max-width: 576px) {
+    .nav-item-custom {
+        margin: 0.2rem 0rem;
+    }
+}
+/* md up */
+@media only screen and (min-width: 768px) {
+    .nav-item-custom {
+        margin-left: 2rem;
+    }
+    .nav-container-custom {
+        padding: 0 5rem;
+    }
+}
+/* lg up */
+@media only screen and (min-width: 992px) {
+    .nav-container-custom {
+        padding: 0 10rem;
+    }
+}
+
+/* Footer Manipulators */
+.footer-custom {
+    border-top: 1px solid var(--st-grey);
+}
+
+/* Links */
+.link-elegant-custom {
+    color: white;
+    padding: 0 0.2rem;
+    background: linear-gradient(to right, var(--st-yellow), var(--st-yellow));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s 0s, color 0.3s 0s;
+}
+.link-elegant-custom:hover {
+    color: var(--st-red);
+    background-size: 100% 100%;
+}
+
+/* Brand Text Manipulators */
+.text-brand-em {
+    color: var(--st-red);
+    background-color: var(--st-yellow);
+    padding: 0 0.1rem;
+}
+.text-brand-em-strong {
+    font-weight: bolder;
+    color: var(--st-red);
+    background-color: var(--st-yellow);
+    padding: 0 0.1rem;
+}
+
+/* Image Manipulators */
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
